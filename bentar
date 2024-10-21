@@ -1,0 +1,118 @@
+// Loop through IDs from answerB1A to answerB14A
+for (let i = 1; i <= 14; i++) {
+    // Construct the element ID
+    let elementId = 'answerB' + i + 'A';
+
+    // Find the element by ID
+    let element = document.querySelector('#' + elementId);
+
+    // Check if the element exists
+    if (element) {
+        // Create a new mouse click event
+        let clickEvent = new MouseEvent('click', {
+            bubbles: true,
+            cancelable: true,
+            view: window
+        });
+
+        // Dispatch the click event on the element
+        element.dispatchEvent(clickEvent);
+
+        // Output a message to the console indicating the click
+        console.log('Left clicked on element with ID ' + elementId);
+    } else {
+        // Output a message to the console indicating the element was not found
+        console.log('Element with ID ' + elementId + ' not found');
+    }
+}
+
+// Find and click on element with ID answerB15C
+let answerB15C = document.querySelector('#answerB15C');
+if (answerB15C) {
+    let clickEvent = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+    });
+
+    // Dispatch the click event on the answerB15C element
+    answerB15C.dispatchEvent(clickEvent);
+
+    // Output a message to the console indicating the click
+    console.log('Left clicked on element with ID answerB15C');
+} else {
+    // Output a message to the console indicating answerB15C was not found
+    console.log('Element with ID answerB15C not found');
+}
+
+// Find and click on element with ID answerB16A
+let answerB16A = document.querySelector('#answerB16A');
+if (answerB16A) {
+    let clickEvent = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+    });
+
+    // Dispatch the click event on the answerB16A element
+    answerB16A.dispatchEvent(clickEvent);
+
+    // Output a message to the console indicating the click
+    console.log('Left clicked on element with ID answerB16A');
+} else {
+    // Output a message to the console indicating answerB16A was not found
+    console.log('Element with ID answerB16A not found');
+}
+
+// Find and click on element with ID nextBtn
+let nextBtn = document.querySelector('#nextBtn');
+if (nextBtn) {
+    let clickEvent = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+    });
+
+// Dispatch the click event on the nextBtn element
+nextBtn.dispatchEvent(clickEvent);
+
+// Output a message to the console indicating the click
+console.log('Left clicked on element with ID nextBtn');
+} else {
+// Output a message to the console indicating nextBtn was not found
+console.log('Element with ID nextBtn not found');
+}
+
+// Function to simulate a left click on the specified element ID
+function leftClickElement(elementId) {
+let element = document.querySelector('#' + elementId);
+if (element) {
+    let clickEvent = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+    });
+    element.dispatchEvent(clickEvent);
+    console.log('Left clicked on element with ID ' + elementId);
+} else {
+    console.log('Element with ID ' + elementId + ' not found');
+}
+}
+
+// Click on elements with IDs from answerC1B to answerC17B
+for (let i = 1; i <= 17; i++) {
+    leftClickElement('answerC' + i + 'B');
+}
+
+// Click on elements with IDs from answerD1B to answerD6B
+for (let i = 1; i <= 6; i++) {
+    leftClickElement('answerD' + i + 'B');
+}
+
+// Click on elements with IDs from answerE1B to answerE8B
+for (let i = 1; i <= 8; i++) {
+    leftClickElement('answerE' + i + 'B');
+}
+
+// Click on element with ID nextBtn
+leftClickElement('nextBtn');
